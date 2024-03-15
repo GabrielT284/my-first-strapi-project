@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lottery",
     "pluralName": "lotteries",
-    "displayName": "Lottery"
+    "displayName": "Lottery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,11 +20,27 @@
     "description": {
       "type": "blocks"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "lotteries"
+    "Lot_id": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    },
+    "description_page": {
+      "type": "string"
+    },
+    "special": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
